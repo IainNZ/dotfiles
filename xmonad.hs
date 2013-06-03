@@ -19,5 +19,6 @@ main = do
         } `additionalKeys`
 		[ ((0 , xF86XK_AudioLowerVolume), spawn "amixer set Master on && amixer set Headphone on && amixer set Master 2-"),
 		  ((0 , xF86XK_AudioRaiseVolume), spawn "amixer set Master on && amixer set Headphone on && amixer set Master 2+"),
-		  ((0 , xF86XK_AudioMute), spawn "amixer set Master toggle && amixer set Headphone toggle")
+		  ((0 , xF86XK_AudioMute), spawn "amixer set Master toggle && amixer set Headphone toggle"),
+		  ((mod4Mask .|. controlMask, xK_l), spawn "gnome-screensaver-command --lock")
 		]
