@@ -39,4 +39,8 @@ curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen
 # 2: Install solarized
 rm -rf ~/.vim/bundle/vim-colors-solarized
 git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+# 3: Install base-16
+rm -rf ~/.vim/bundle/base16-vim
+git clone git://github.com/chriskempson/base16-vim.git ~/.vim/bundle/base16
+
 echo "...done"
