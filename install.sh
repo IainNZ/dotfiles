@@ -31,3 +31,12 @@ ln -s $dir/xmonad.hs ~/.xmonad/xmonad.hs
 ln -s $dir/getvolume.sh ~/.xmonad/getvolume.sh
 echo "...done"
 
+# Install gvim stuff
+echo "Install gvim stuff..."
+# 1: Install pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+# 2: Install solarized
+rm -rf ~/.vim/bundle/vim-colors-solarized
+git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+echo "...done"
