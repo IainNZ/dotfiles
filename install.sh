@@ -42,5 +42,10 @@ git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vi
 # 3: Install base-16
 rm -rf ~/.vim/bundle/base16-vim
 git clone git://github.com/chriskempson/base16-vim.git ~/.vim/bundle/base16
-
+# 4: Install julia-vim
+rm -rf ~/.vim/bundle/julia-vim
+git clone git://github.com/JuliaLang/julia-vim.git ~/.vim/bundle/julia-vim
+# 5: Install desert
+mkdir -p ~/.vim/bundle/desert/colors
+git clone git://github.com/fugalh/desert.vim.git ~/.vim/bundle/desert/colors
 echo "...done"

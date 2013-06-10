@@ -4,7 +4,8 @@ filetype plugin indent on
 syntax enable
 set background=dark
 " colorscheme solarized
-colorscheme base16-default
+" colorscheme base16-default
+colorscheme desert
 set expandtab
 set autoindent
 set nocindent
