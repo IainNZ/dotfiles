@@ -1,2 +1,2 @@
-xrandr --output HDMI-1 --auto --left-of LVDS-1
-xrandr --output HDMI-1 --primary
+xrandr --output HDMI-1 --auto --above LVDS-1
+xrandr --output HDM1-1 --primary
