@@ -1,0 +1,14 @@
+# Icons stick to right side of tray
+icon_gravity E
+# Five icons wide, one high, 0 pixels from right, 0 from top
+geometry 5x1-0+0
+max_geometry 5x1-0+0
+# Black background
+background "#000000"
+# Doesn't appear in a task bar (not a problem for us?)
+skip_taskbar
+# Icons are 12 pixels high
+icon_size 12
+kludges force_icons_size
+# Tell xmonad "Stand back, I got this"
+window_strut none

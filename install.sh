@@ -20,6 +20,8 @@ mv ~/.vimrc $olddir/
 mv ~/.xmobarrc $olddir/
 mv ~/.xmonad/xmonad.hs $olddir/
 mv ~/.xmonad/getvolume.sh $olddir/
+mv ~/.stalonetrayrc $olddir/
+mv ~/.xmonad/startxmonad.sh $olddir/
 echo "...done"
 
 # Create symlinks 
@@ -29,6 +31,8 @@ ln -s $dir/vimrc ~/.vimrc
 ln -s $dir/xmobarrc ~/.xmobarrc
 ln -s $dir/xmonad.hs ~/.xmonad/xmonad.hs
 ln -s $dir/getvolume.sh ~/.xmonad/getvolume.sh
+ln -s $dir/stalonetrayrc ~/.stalonetrayrc
+ln -s $dir/startxmonad.sh ~/.xmonad/startxmonad.sh
 echo "...done"
 
 # Install gvim stuff
