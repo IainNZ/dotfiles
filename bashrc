@@ -18,6 +18,13 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=10000
 
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
 #############################################################################
 # WINDOW OPTIONS
 #############################################################################
@@ -40,7 +47,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 # Prompt config
-export PS1='\e[1;30m\u@\h:\e[m \e[1;31m\w\e[m$ '
+#export PS1='\e[1;30m\u@\h:\e[m \e[1;31m\w\e[m$ '
+#export PS1='\u@\h: \w$ '
+# http://www.kirsle.net/wizards/ps1.html
+export PS1="\[$(tput bold)\]\[$(tput setaf 0)\]\u@\h:\[$(tput setaf 1)\]\w\$ \[$(tput sgr0)\]"
 # Reduce size of current working directory
 PROMPT_DIRTRIM=2
 # Set the title of the window
@@ -58,8 +68,12 @@ alias l='ls -CF'
 # EXPORTS
 #############################################################################
 export GUROBI_LIB=/opt/gurobi550/linux64/lib/libgurobi55.so
+export GUROBI_HOME=/opt/gurobi550/linux64/
 
 if [ "$(hostname)" = "che" ]; then
-  echo "Running on che"
+  echo "Running on che, use ~/julia and Gurobi 5.1"
+  export GUROBI_HOME=/opt/gurobi510/linux64/
+  export GUROBI_LIB=/opt/gurobi510/linux64/lib/libgurobi51.so
+
   export PATH="$PATH:/home/idunning/julia"
 fi
