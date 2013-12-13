@@ -76,4 +76,6 @@ if [ "$(hostname)" = "che" ]; then
   export GUROBI_LIB=/opt/gurobi510/linux64/lib/libgurobi51.so
 
   export PATH="$PATH:/home/idunning/julia"
+
+  export PS1='\u@\h: \w$ '
 fi
