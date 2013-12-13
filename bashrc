@@ -67,5 +67,16 @@ alias l='ls -CF'
 #############################################################################
 # EXPORTS
 #############################################################################
-export GUROBI_HOME=/opt/gurobi560/linux64/
+export GUROBI_LIB=/opt/gurobi550/linux64/lib/libgurobi55.so
+export GUROBI_HOME=/opt/gurobi550/linux64/
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+
+if [ "$(hostname)" = "che" ]; then
+  echo "Running on che, use ~/julia and Gurobi 5.1"
+  export GUROBI_HOME=/opt/gurobi510/linux64/
+  export GUROBI_LIB=/opt/gurobi510/linux64/lib/libgurobi51.so
+
+  export PATH="$PATH:/home/idunning/julia"
+
+  export PS1='\u@\h: \w$ '
+fi
