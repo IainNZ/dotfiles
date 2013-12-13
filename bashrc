@@ -58,3 +58,8 @@ alias l='ls -CF'
 # EXPORTS
 #############################################################################
 export GUROBI_LIB=/opt/gurobi550/linux64/lib/libgurobi55.so
+
+if [ "$(hostname)" = "che" ]; then
+  echo "Running on che"
+  export PATH="$PATH:/home/idunning/julia"
+fi
