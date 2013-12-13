@@ -67,4 +67,5 @@ alias l='ls -CF'
 #############################################################################
 # EXPORTS
 #############################################################################
-export GUROBI_HOME=/opt/gurobi550/linux64/
+export GUROBI_HOME=/opt/gurobi560/linux64/
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
