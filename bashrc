@@ -72,9 +72,10 @@ export GUROBI_HOME=/opt/gurobi550/linux64/
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 
 if [ "$(hostname)" = "che" ]; then
-  echo "Running on che, use ~/julia and Gurobi 5.1"
-  export GUROBI_HOME=/opt/gurobi510/linux64/
-  export GUROBI_LIB=/opt/gurobi510/linux64/lib/libgurobi51.so
+  echo "Running on che, use ~/julia and Gurobi 5.6.2"
+  export GUROBI_HOME=/opt/gurobi562/linux64/
+  export GUROBI_LIB=/opt/gurobi562/linux64/lib/libgurobi56.so
+  export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 
   export PATH="$PATH:/home/idunning/julia"
 
